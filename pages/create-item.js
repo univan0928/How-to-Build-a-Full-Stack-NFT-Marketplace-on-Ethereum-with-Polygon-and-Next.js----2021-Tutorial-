@@ -51,9 +51,9 @@ export default function CreateItem () {
         }
     }
 
-    async function createSale() {
-        const Web3Modal = new Web3Modal()
-        const connection = await Web3Modal.connect()
+    async function createSale(url) {
+        const web3Modal = new Web3Modal()
+        const connection = await web3Modal.connect()
         const provider = new ethers.providers.Web3Provider(connection)
         const signer = provider.getSigner()
 
